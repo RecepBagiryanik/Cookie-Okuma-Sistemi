@@ -10,9 +10,7 @@ Github : https://github.com/RecepBagiryanik
 <?php 
 setcookie("rememberMe", "sa"); //TR::Cookie Oluşturma Bölümü
 
-$cookie = $_SERVER["HTTP_COOKIE"]; //TR::Cookieleri Çekme Bölümü
-
-if ($cookie==strpos("$cookie", "rememberMe")) { //Cookie Kontrol Bölümü
+if (isset($_COOKIE["rememberMe"])) { //Cookie Kontrol Bölümü
 	echo "Cookie Okundu!"; //Cookie Varsa
 } else {
 	echo "Cookie Okunamadı!"; //Cookie Yoksa
